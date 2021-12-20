@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2021/03/01 17:26:25.000.735,=C:\Users\Kairom\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/04/05 17:39:36.000.399,=C:\Users\Kairom\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/08/09 09:33:01.000.078,=C:\Users\Kairom\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/08/09 09:35:53.000.259,=C:\Users\Kairom\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/10/04 16:28:10.000.037,=C:\Users\Kairom\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/10/04 17:25:19.000.383,=C:\Users\Kairom\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/10/04 17:32:20.000.889,=C:\Users\Kairom\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/12/17 11:16:55.000.105,=C:\Users\Kairom\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/12/17 11:17:41.000.008,C:\Users\Kairom\Desktop\Sistemas\TesteWK\uPrincipal.dfm=C:\Users\Kairom\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2021/12/17 11:17:41.000.008,C:\Users\Kairom\Desktop\Sistemas\TesteWK\uPrincipal.pas=C:\Users\Kairom\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/12/17 11:17:45.000.550,C:\Users\Kairom\Desktop\Sistemas\TesteWK\TesteWK.dproj=C:\Users\Kairom\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2021/12/17 11:21:53.000.316,=C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2021/12/17 11:22:05.000.999,C:\Users\Kairom\Desktop\Sistemas\TesteWK\uDados.dfm=C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.dfm</Transaction>
+    <Transaction>2021/12/17 11:22:05.000.999,C:\Users\Kairom\Desktop\Sistemas\TesteWK\uDados.pas=C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2021/12/17 14:36:00.000.022,=C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2021/12/17 14:36:15.000.240,C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.dfm=C:\Users\Kairom\Desktop\Sistemas\TesteWK\uPedido.dfm</Transaction>
+    <Transaction>2021/12/17 14:36:15.000.240,C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.pas=C:\Users\Kairom\Desktop\Sistemas\TesteWK\uPedido.pas</Transaction>
+    <Transaction>2021/12/17 15:53:53.000.775,=C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2021/12/17 16:07:50.000.395,C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.pas=C:\Users\Kairom\Desktop\Sistemas\TesteWK\uPesCliente.pas</Transaction>
+    <Transaction>2021/12/17 16:07:50.000.395,C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.dfm=C:\Users\Kairom\Desktop\Sistemas\TesteWK\uPesCliente.dfm</Transaction>
+    <Transaction>2021/12/18 17:22:33.000.508,=C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2021/12/18 17:23:58.000.573,C:\Users\Kairom\Desktop\Sistemas\TesteWK\uPesProduto.dfm=C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.dfm</Transaction>
+    <Transaction>2021/12/18 17:23:58.000.573,C:\Users\Kairom\Desktop\Sistemas\TesteWK\uPesProduto.pas=C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2021/12/18 18:07:30.000.849,=C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.pas</Transaction>
+    <Transaction>2021/12/18 18:17:13.000.185,C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.pas=C:\Users\Kairom\Desktop\Sistemas\TesteWK\uPesProdutoQuantidade.pas</Transaction>
+    <Transaction>2021/12/18 18:17:13.000.185,C:\Users\Kairom\Desktop\Sistemas\TesteWK\Unit1.dfm=C:\Users\Kairom\Desktop\Sistemas\TesteWK\uPesProdutoQuantidade.dfm</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

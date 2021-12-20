@@ -1,0 +1,18 @@
+program TesteWK;
+
+uses
+  Vcl.Forms,
+  uPrincipal in 'uPrincipal.pas' {frmPrincipal},
+  uDados in 'uDados.pas' {dmDados: TDataModule},
+  uPedido in 'uPedido.pas' {frmPedido};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TdmDados, dmDados);
+  Application.CreateForm(TfrmPrincipal, frmPrincipal);
+  Application.CreateForm(TfrmPedido, frmPedido);
+  Application.Run;
+end.

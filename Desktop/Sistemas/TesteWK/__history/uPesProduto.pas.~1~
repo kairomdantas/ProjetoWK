@@ -1,0 +1,26 @@
+unit uPesProduto;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  TfrmPesProduto = class(TForm)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPesProduto: TfrmPesProduto;
+
+implementation
+
+{$R *.dfm}
+
+uses uDados;
+
+end.

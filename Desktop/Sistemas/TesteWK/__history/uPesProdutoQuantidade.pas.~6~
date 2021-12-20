@@ -1,0 +1,58 @@
+unit uPesProdutoQuantidade;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmPesProdutoQuantidade = class(TForm)
+    GroupBox1: TGroupBox;
+    edtQuantidade: TEdit;
+    edtAcao: TEdit;
+    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPesProdutoQuantidade: TfrmPesProdutoQuantidade;
+
+implementation
+
+{$R *.dfm}
+
+uses uPedido;
+
+procedure TfrmPesProdutoQuantidade.FormClose(Sender: TObject;
+  var Action: TCloseAction);
+begin
+  Action := caFree;
+  frmPesProdutoQuantidade := Nil;
+end;
+
+procedure TfrmPesProdutoQuantidade.FormKeyDown(Sender: TObject; var Key: Word;
+  Shift: TShiftState);
+begin
+  if Key = VK_RETURN then
+  begin
+    if edtQuantidade.Text = '' then
+
+
+    if edtAcao.Text = 'Insert' then
+    begin
+      frmPedido.qryAdicionar.Edit;
+      frmPedido.qryAdicionarpro_quantidade.Text := edtQuantidade.Text;
+      frmPedido.qryAdicionar.Post;
+      frmPedido.qryPedidoProduto.Active := False;
+      frmPedido.qryPedidoProduto.Active := True;
+    end;
+    Close;
+  end;
+end;
+
+end.

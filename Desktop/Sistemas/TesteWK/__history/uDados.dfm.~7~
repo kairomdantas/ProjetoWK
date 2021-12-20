@@ -1,0 +1,20 @@
+object dmDados: TdmDados
+  OldCreateOrder = False
+  Height = 221
+  Width = 379
+  object ADOConnection: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=MSDASQL.1;Password=zaq123edc;Persist Security Info=True' +
+      ';User ID=root;Data Source=TesteWK;Initial Catalog=testewk'
+    LoginPrompt = False
+    Left = 112
+    Top = 88
+  end
+  object qrySQL: TADOQuery
+    Connection = ADOConnection
+    Parameters = <>
+    Left = 208
+    Top = 88
+  end
+end

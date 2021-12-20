@@ -1,0 +1,45 @@
+unit uPesCliente;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls;
+
+type
+  TfrmPesCliente = class(TForm)
+    GroupBox1: TGroupBox;
+    edtPesquisa: TEdit;
+    GroupBox2: TGroupBox;
+    GroupBox3: TGroupBox;
+    RadioButton1: TRadioButton;
+    RadioButton2: TRadioButton;
+    ComboBox1: TComboBox;
+    RadioButton3: TRadioButton;
+    RadioButton4: TRadioButton;
+    GroupBox4: TGroupBox;
+    RadioButton5: TRadioButton;
+    RadioButton6: TRadioButton;
+    RadioButton7: TRadioButton;
+    GroupBox5: TGroupBox;
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPesCliente: TfrmPesCliente;
+
+implementation
+
+{$R *.dfm}
+
+procedure TfrmPesCliente.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  Action := caFree;
+  frmPesCliente := Nil;
+end;
+
+end.

@@ -1,0 +1,111 @@
+unit uPrincipal;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Data.DB,
+  Vcl.ComCtrls, Vcl.Grids, Vcl.DBGrids, Vcl.ExtCtrls, Data.Win.ADODB;
+
+type
+  TfrmPrincipal = class(TForm)
+    gpPainel: TGroupBox;
+    btnExcluir: TSpeedButton;
+    btnAbrir: TSpeedButton;
+    btnNovo: TSpeedButton;
+    gpPedidos: TGroupBox;
+    DBGrid1: TDBGrid;
+    sbPrincipal: TStatusBar;
+    tmrHora: TTimer;
+    qryPedido: TADOQuery;
+    dsPedido: TDataSource;
+    qryPedidoped_data: TWideStringField;
+    qryPedidoped_cli_codigo: TIntegerField;
+    qryPedidoped_valor: TBCDField;
+    qryPedidocli_codigo: TAutoIncField;
+    qryPedidocli_nome: TWideStringField;
+    qryPedidocli_cidade: TWideStringField;
+    qryPedidocli_uf: TWideStringField;
+    qryPedidoped_codigo: TIntegerField;
+    procedure FormShow(Sender: TObject);
+    procedure tmrHoraTimer(Sender: TObject);
+    procedure btnNovoClick(Sender: TObject);
+    procedure DBGrid1DblClick(Sender: TObject);
+    procedure btnExcluirClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPrincipal: TfrmPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+uses uDados, uPedido;
+
+procedure TfrmPrincipal.btnExcluirClick(Sender: TObject);
+begin
+  dmDados.qrySQL.SQL.Clear;
+  dmDados.qrySQL.SQL.Add('DELETE FROM PEDIDO_PRODUTO WHERE PRO_PED_CODIGO = 0' + qryPedidoped_codigo.Text);
+  dmDados.qrySQL.ExecSQL;
+  dmDados.qrySQL.SQL.Clear;
+  dmDados.qrySQL.SQL.Add('DELETE FROM PEDIDO WHERE PED_CODIGO = 0' + qryPedidoped_codigo.Text);
+  dmDados.qrySQL.ExecSQL;
+  qryPedido.Active := False;
+  qryPedido.Active := True;
+end;
+
+procedure TfrmPrincipal.btnNovoClick(Sender: TObject);
+begin
+  If (frmPedido = Nil) Then
+    frmPedido := TfrmPedido.Create(Application);
+
+  frmPedido.qryPedido.Active := True;
+  frmPedido.qryPedido.Insert;
+  frmPedido.qryPedidoped_data.Text := DateToStr(Now);
+  frmPedido.qryPedidoped_valor.Text := '0';
+
+  frmPedido.qryCodigo.Active := False;
+  frmPedido.qryCodigo.Active := True;
+
+  frmPedido.qryPedidoped_codigo.Text := IntToStr(frmPedido.qryCodigoPED_CODIGO.Value + 1);
+  dmDados.qrySQL.SQL.Clear;
+  dmDados.qrySQL.SQL.Add('DELETE FROM PEDIDO WHERE PED_CODIGO = 0' + frmPedido.qryPedidoped_codigo.Text);
+  dmDados.qrySQL.ExecSQL;
+
+  frmPedido.ShowModal;
+end;
+
+procedure TfrmPrincipal.DBGrid1DblClick(Sender: TObject);
+begin
+  If (frmPedido = Nil) Then
+    frmPedido := TfrmPedido.Create(Application);
+
+  frmPedido.qryPedido.Active := False;
+  frmPedido.qryPedido.SQL.Clear;
+  frmPedido.qryPedido.SQL.Add('SELECT * FROM PEDIDO WHERE PED_CODIGO = 0' + qryPedidoped_codigo.Text);
+  frmPedido.qryPedido.Active := True;
+
+  frmPedido.edtCodigo.Text := qryPedidoped_codigo.Text;
+
+  frmPedido.ShowModal;
+end;
+
+procedure TfrmPrincipal.FormShow(Sender: TObject);
+begin
+  //PREENCHE O STATUSBAR
+  sbPrincipal.Panels[0].Text := ' Usuário: Kairom Dantas';
+  sbPrincipal.Panels[1].Text := DateTimeToStr(Now) + ' ';
+end;
+
+procedure TfrmPrincipal.tmrHoraTimer(Sender: TObject);
+begin
+  //INFORMA O HORÁRIO POR SEGUNDO
+  sbPrincipal.Panels[1].Text := DateTimeToStr(Now) + ' ';
+end;
+
+end.
